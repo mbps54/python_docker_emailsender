@@ -40,7 +40,8 @@ docker run -it
 -e POST_TO_ADDRESS_LIST='hermione.granger@hogwarts.com'
 -e POST_SUBJECT='Philosopher's Stone'
 -e POST_MESSAGE='Dear Hermione, ...'
--e POST_SCHEDULE='00 17 X X 3' mbps54/email:2.0
+-e POST_SCHEDULE='00 17 X X 3'
+mbps54/email:2.0
 
 3b. Run a container from hub.docker.com once
 docker run -it
@@ -52,4 +53,5 @@ docker run -it
 -e POST_TO_ADDRESS_LIST='hermione.granger@hogwarts.com'
 -e POST_SUBJECT='Philosopher's Stone'
 -e POST_MESSAGE='Dear Hermione, ...'
--e POST_SCHEDULE='00 17 X X 3' mbps54/email:2.0
+-e POST_SCHEDULE='00 17 X X 3'
+mbps54/email:2.0
