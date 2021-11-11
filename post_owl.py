@@ -4,7 +4,6 @@
 # Script send an email using MS Exchange server to a defined address list.
 # There are 8 system environments needed for this script.
 
-
 import os
 import time
 from sys import argv
@@ -20,7 +19,7 @@ POSTPASSWORD = str(os.environ.get("POST_PASSWORD"))  # Ex: 'Caput.Draconis'
 POSTFROMADDRESS = str(os.environ.get("POST_FROM_ADDRESS"))  # Ex: 'harry.potter@hogwarts.com'
 POSTTOADDRESS = str(os.environ.get("POST_TO_ADDRESS_LIST"))  # Ex: 'hermione.granger@hogwarts.com'
 POSTSUBJECT = str(os.environ.get("POST_SUBJECT"))  # Ex: 'Philosopher's Stone'
-POSTMESSAGE = str(os.environ.get("POST_MESSAGE"))  # Ex: Dear Hermione, Thank you for ...'
+POSTMESSAGE = str(os.environ.get("POST_MESSAGE"))  # Ex: 'Dear Hermione, Thank you for ...'
 
 
 def send_mail(receiver_address: str, subject: str, mail_content: str) -> None:
@@ -44,7 +43,7 @@ def send_mail(receiver_address: str, subject: str, mail_content: str) -> None:
         to_recipients=[Mailbox(email_address=receiver_address)],
     )
     m.send_and_save()
-    print('Message have been sent')
+    print('E-mail have been sent to {}'.format(POSTTOADDRESS))
 
 
 if __name__ == "__main__":
