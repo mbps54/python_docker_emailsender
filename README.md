@@ -1,4 +1,4 @@
-##App for automatic e-mail generation (for MS Exchange)
+## App for automatic e-mail generation (for MS Exchange)
 ### Description
 Docker container can send a letter(s) to a comma separated list of email addresses (from system environments)
 ```POST_SCHEDULE``` - OPTIONAL variable, if it is ommited, email is send once.
