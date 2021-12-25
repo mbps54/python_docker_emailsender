@@ -7,7 +7,6 @@ RUN set -ex && apt-get update && apt-get install -y \
     python3=3.8.2-0ubuntu2 \
     python3-pip=20.0.2-5ubuntu1.6 \
     cron=3.0pl1-136ubuntu1 \
-    vim=2:8.1.2269-1ubuntu5.3 \
     ntp=1:4.2.8p12+dfsg-3ubuntu4.20.04.1 \
     && apt-get clean && rm -rf /var/cache/apt
 

@@ -14,12 +14,12 @@ Docker image is also available on [Docker Hub](https://hub.docker.com/r/mbps54/a
 ### Make Docker image
 1. Build an image from code
 ```
-docker build . -t mbps54/email:latest
+docker build . -t mbps54/app-email-sender:latest
 ```
 
 2. Push container to hub (optional)
 ```
-docker push mbps54/email:latest
+docker push mbps54/app-email-sender:latest
 ```
 ### Usage options
 1. Run Docker container with a schedule (17:00 at Wednesdays)
@@ -34,7 +34,7 @@ docker run -it \
 -e POST_SUBJECT='Philosopher's Stone' \
 -e POST_MESSAGE='Dear Hermione, ...' \
 -e POST_SCHEDULE='00 17 X X 3' \
-mbps54/email:latest
+mbps54/app-email-sender:latest
 ```
 
 2. Run Docker container once
@@ -48,7 +48,7 @@ docker run -it \
 -e POST_TO_ADDRESS_LIST='hermione.granger@hogwarts.com' \
 -e POST_SUBJECT='Philosopher's Stone' \
 -e POST_MESSAGE='Dear Hermione, ...' \
-mbps54/email:latest
+mbps54/app-email-sender:latest
 ```
 
 3. Run app locally (no Docker container)
