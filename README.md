@@ -9,7 +9,7 @@ Crontab style is used, but use "X" instead of "*"
 2. Dockerfile to make a Docker container
 3. Kubernetes Deployment manifest to run the app
 
-Docker image is also available on [Docker Hub](https://hub.docker.com/r/mbps54/app-email)
+Docker image is also available on [Docker Hub](https://hub.docker.com/repository/docker/mbps54/app-email-sender)
 
 ### Make Docker image
 1. Build an image from code
