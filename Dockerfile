@@ -14,6 +14,6 @@ COPY . /app
 
 RUN pip install -r /app/requirements.txt
 
-RUN  chmod +x /app/post_owl.py /app/start.sh
+RUN  chmod +x /app/app-email-sender.py /app/start.sh
 
 ENTRYPOINT ["/bin/bash", "/app/start.sh"]

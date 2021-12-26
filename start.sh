@@ -15,11 +15,11 @@ fi
 declare -p | grep -Ev 'BASHOPTS|BASH_VERSINFO|EUID|PPID|SHELLOPTS|UID' > /container.env
 
 if [[ -z $POST_SCHEDULE ]]; then
-    exec python3 /app/post_owl.py
+    exec python3 /app/app-email-sender.py
 else
     echo "SHELL=/bin/bash
     BASH_ENV=/container.env
-    ${POST_SCHEDULE//X/*} /app/post_owl.py
+    ${POST_SCHEDULE//X/*} /app/app-email-sender.py
     # This extra line makes it a valid cron" > scheduler.txt
     crontab scheduler.txt
     exec cron -f

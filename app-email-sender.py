@@ -12,18 +12,17 @@ from exchangelib.protocol import BaseProtocol, NoVerifyHTTPAdapter
 
 BaseProtocol.HTTP_ADAPTER_CLS = NoVerifyHTTPAdapter
 
-POSTSERVER = str(os.environ.get("POST_SERVER"))  # Ex: 'mail.hogwarts.com'
-POSTDOMAIN = str(os.environ.get("POST_DOMAIN"))  # Ex: 'GRYFFINDOR'
-POSTUSERNAME = str(os.environ.get("POST_USERNAME"))  # Ex: 'harry.potter'
-POSTPASSWORD = str(os.environ.get("POST_PASSWORD"))  # Ex: 'Caput.Draconis'
-POSTFROMADDRESS = str(os.environ.get("POST_FROM_ADDRESS"))  # Ex: 'harry.potter@hogwarts.com'
-POSTTOADDRESS = str(os.environ.get("POST_TO_ADDRESS_LIST"))  # Ex: 'hermione.granger@hogwarts.com'
-POSTSUBJECT = str(os.environ.get("POST_SUBJECT"))  # Ex: 'Philosopher's Stone'
-POSTMESSAGE = str(os.environ.get("POST_MESSAGE"))  # Ex: 'Dear Hermione, Thank you for ...'
+POSTSERVER = str(os.environ.get("POST_SERVER"))
+POSTDOMAIN = str(os.environ.get("POST_DOMAIN"))
+POSTUSERNAME = str(os.environ.get("POST_USERNAME"))
+POSTPASSWORD = str(os.environ.get("POST_PASSWORD"))
+POSTFROMADDRESS = str(os.environ.get("POST_FROM_ADDRESS"))
+POSTTOADDRESS = str(os.environ.get("POST_TO_ADDRESS_LIST"))
+POSTSUBJECT = str(os.environ.get("POST_SUBJECT"))
+POSTMESSAGE = str(os.environ.get("POST_MESSAGE"))
 
 
 def send_mail(receiver_address: str, subject: str, mail_content: str) -> None:
-    # function send email, using exchangelib module and input parameters
     credentials = Credentials(
         username=POSTDOMAIN + "\\" + POSTUSERNAME, password=POSTPASSWORD
     )
@@ -43,7 +42,7 @@ def send_mail(receiver_address: str, subject: str, mail_content: str) -> None:
         to_recipients=[Mailbox(email_address=receiver_address)],
     )
     m.send_and_save()
-    print('E-mail have been sent to {}'.format(POSTTOADDRESS))
+    print("E-mail have been sent to {}".format(POSTTOADDRESS))
 
 
 if __name__ == "__main__":
