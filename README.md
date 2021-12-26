@@ -1,10 +1,10 @@
-## App for automatic e-mail generation (for MS Exchange)
+## App for automatic e-main message sending (for MS Exchange)
 ### Description
 Docker container can send a letter(s) to a comma separated list of email addresses (from system environments)
 ```POST_SCHEDULE``` - OPTIONAL variable, if it is ommited, email is send once.
 Crontab style is used, but use "X" instead of "*"
 
-### This git direcory contains:
+### This direcory contains:
 1. Python and bash codes
 2. Dockerfile to make a Docker container
 3. Kubernetes Deployment manifest to run the app
